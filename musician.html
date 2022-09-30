@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+    <head><title>Assignment 6</title></head>
+
+
+<h2>Musician guess by Veeragandham Raghava Chowdary</h2>
+
+<form>
+    <label for="form1_pass">Enter the secret musician name</label>
+    <input type ="password" id="form1_pass" name="form1_pass" min=10 max=50 step=2 value="john Lennon"> <br>
+
+    <label for="form1_guess">Guess the musician</label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus><br>
+
+    <input type="button" onclick="checkGuess()" value="Get values from form">
+</form>
+
+
+<p id="result">This text will be displayed </p>
+
+<script> 
+correct=0;
+wrong=0;
+
+function checkGuess(){
+    console.log("check the musician")
+    pass = document.getElementById("form1_pass").value
+    guess = document.getElementById("form1_guess").value
+    if(pass==guess)
+    {
+        correct=correct+1
+        alert("you got it right")
+    }
+    else
+    {
+        wrong=wrong+1
+        alert("wrong musician")
+    }
+   result.innerHTML="correct guess:"+correct+"wrong"+wrong
+}
+
+</script>
+
+</body>
+</html> 
