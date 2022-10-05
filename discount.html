@@ -29,8 +29,9 @@ function discount (){
     confirmed = confirm("Are these the values? "+base+" and "+discoun)
     out = document.getElementById("result")
     for(let i=1;i<6;i++)
-    {
-        result=result+base*i-();
+    {   
+        let cal=base*i-((base*i)*discoun/100)
+        result=result+cal+" "
     }
     out.innerHTML="Discounted amounts for base value "+base+" are"+result;
 
