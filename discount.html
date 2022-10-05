@@ -36,6 +36,38 @@ function discount (){
 
 }
 </script>
+<form>    
+    <input type="radio" onclick="chooseOp()" id="radio1" name="topping" value="times" >
+    <label for="form_rd2">*</label><br>
+    <input type="radio" onclick="chooseOp()" id="radio2" name="topping" value="divide">
+    <label for="form_rd3">/</label><br>
+    <input type="radio" onclick="chooseOp()" id="radio3" name="topping" value="exponent">
+    <label for="form_rd2">**</label><br>
+</form>
+<p id="result1">result</p>
+<script>
+    function chooseOp()
+    {
+    base= document.getElementById("form1_age").value
+    discoun= document.getElementById("form1_nick").value
+    out=document.getElementById("result1")
+    if(document.getElementById("radio1").checked)
+    {
+        let z=base*discoun;
+        out.innerHTML=z
+    }
+    else if(document.getElementById("radio2").checked)
+    {
+        out.innerHTML=base/discoun
+    }
+    else if(document.getElementById("radio3").checked)
+    {
+        out.innerHTML=base**discoun
+    }
+
+    }
+
+</script>
 
 </body>
 </html> 
